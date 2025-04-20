@@ -1,0 +1,9 @@
+Flask==2.3.2
+yfinance==0.2.26
+finvizfinance==0.14.6
+transformers==4.31.0
+torch==2.6.0
+pandas==2.1.0
+numpy==1.25.0
+stock-indicators==1.2.0
+requests==2.31.0
