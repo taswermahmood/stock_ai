@@ -1,6 +1,6 @@
 {
     "framework": null,
-    "installCommand": "pip install -r requirements.txt",
+    "installCommand": "pip3 install -r requirements.txt",
     "buildCommand": "echo 'No build required'",
     "outputDirectory": ".",
     "devCommand": "python stock_analyzer.py",
