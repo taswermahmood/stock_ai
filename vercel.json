@@ -1,13 +1,18 @@
 {
-    "framework": null,
-    "installCommand": "pip3 install -r requirements.txt",
-    "buildCommand": "echo 'No build required'",
-    "outputDirectory": ".",
-    "devCommand": "python stock_analyzer.py",
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "stock_analyzer.py"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/stock_analyzer.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/stock_analyzer.py"
+    }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.12"
   }
+}
