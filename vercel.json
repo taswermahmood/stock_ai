@@ -3,7 +3,11 @@
   "builds": [
     {
       "src": "api/stock_analyzer.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
+      }
     }
   ],
   "routes": [
@@ -11,8 +15,5 @@
       "src": "/api/(.*)",
       "dest": "/api/stock_analyzer.py"
     }
-  ],
-  "env": {
-    "PYTHON_VERSION": "3.12"
-  }
+  ]
 }
